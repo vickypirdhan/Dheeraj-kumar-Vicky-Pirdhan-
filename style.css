@@ -1,73 +1,88 @@
+/* Global */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f7f8fc;
-  color: #333;
+  background: #0f172a; /* deep navy */
+  color: #f1f5f9;
 }
 
+/* Header */
 header {
+  position: relative;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
   background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
   color: #fff;
+  overflow: hidden;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+
+header .profile {
+  position: relative;
+  z-index: 2;
 }
 
 header img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   border: 5px solid #fff;
-  margin-bottom: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 header h1 {
-  margin: 10px 0 5px;
-  font-size: 2rem;
+  font-size: 2.4rem;
+  margin: 15px 0 5px;
 }
 
-header p {
-  margin: 5px 0;
+header p a {
+  color: #ffcc70;
+  text-decoration: none;
 }
 
+/* Sections */
 section {
-  padding: 40px 20px;
+  padding: 50px 20px;
   max-width: 1100px;
   margin: auto;
 }
 
 section h2 {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  color: #444;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #38bdf8;
 }
 
 ul li {
-  padding: 10px;
-  margin: 10px 0;
-  background: #fff;
+  padding: 12px;
+  margin: 12px 0;
+  background: #1e293b;
+  border-left: 5px solid #38bdf8;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
+/* Projects */
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
 
 .project-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: #1e293b;
+  border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card img {
@@ -76,24 +91,30 @@ ul li {
   object-fit: cover;
 }
 
+.card-info {
+  padding: 15px;
+}
+
 .project-card h3 {
-  margin: 15px;
-  font-size: 1.2rem;
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  color: #ffcc70;
 }
 
 .project-card p {
-  margin: 0 15px 20px;
-  color: #666;
   font-size: 0.95rem;
+  color: #cbd5e1;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.5);
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #222;
-  color: #fff;
+  padding: 25px;
+  background: #0d1321;
+  color: #cbd5e1;
 }
