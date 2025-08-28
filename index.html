@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio – Your Name</title>
+  <meta name="description" content="Graphic Designer portfolio">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container">
+    <nav class="nav">
+      <a href="#" class="logo">YourName<span>.</span></a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="btn">Hire Me</a>
+      </div>
+    </nav>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Hi, I’m <span class="accent">Your Name</span></h1>
+        <p class="tagline">Graphic Designer • Branding • Social Media Creatives</p>
+        <div class="cta">
+          <a class="btn" href="https://wa.me/923001234567?text=Hi%20I%20want%20to%20hire%20you" target="_blank" rel="noopener">Hire Me on WhatsApp</a>
+          <a class="btn secondary" href="#work">View Work</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="circle"></div>
+        <div class="square"></div>
+        <div class="photo"></div>
+      </div>
+    </section>
+  </header>
+
+  <main class="container">
+    <section id="work" class="section">
+      <h2>Selected Work</h2>
+      <div class="grid">
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <img src="https://picsum.photos/seed/1/1200/800" alt="Project 1 preview" />
+          <div class="card-body"><h3>Poster Campaign</h3><p>Bold type + minimal shapes.</p></div>
+        </a>
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <img src="https://picsum.photos/seed/2/1200/800" alt="Project 2 preview" />
+          <div class="card-body"><h3>Brand Identity</h3><p>Logo, palette, stationery.</p></div>
+        </a>
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <img src="https://picsum.photos/seed/3/1200/800" alt="Project 3 preview" />
+          <div class="card-body"><h3>Social Media Kit</h3><p>Instagram carousels & reels covers.</p></div>
+        </a>
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <img src="https://picsum.photos/seed/4/1200/800" alt="Project 4 preview" />
+          <div class="card-body"><h3>Flyers & Brochures</h3><p>Clean layouts for print.</p></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I’m a graphic designer focused on clear visual communication.
+        I work with Photoshop, Illustrator and Figma. I create posters, logos,
+        branding systems and social content that convert.
+      </p>
+      <ul class="list">
+        <li><strong>Tools:</strong> Photoshop, Illustrator, Figma, Canva</li>
+        <li><strong>Services:</strong> Logo & Brand Identity, Posters, Social Creatives</li>
+        <li><strong>Location:</strong> Karachi, Pakistan</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact-cards">
+        <a class="contact-card" href="mailto:you@example.com">
+          <h3>Email</h3><p>you@example.com</p>
+        </a>
+        <a class="contact-card" href="https://wa.me/923001234567" target="_blank" rel="noopener">
+          <h3>WhatsApp</h3><p>+92 300 1234567</p>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+          <h3>LinkedIn</h3><p>/in/yourusername</p>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> Your Name — Available for freelance.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
