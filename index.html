@@ -1,283 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dheeraj Kumar (Vicky Pirdhan) - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dheeraj Kumar — Premium Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/refs/heads/main/1318caee-b7cd-497a-bf22-77c7ee2200eb.png" alt="Profile" class="profile-img">
-      <h1>Dheeraj Kumar (Vicky Pirdhan)</h1>
-      <p>Graphic Designer | Web Designer | Creative Thinker</p>
-      <a href="mailto:vickypirdhan40@gmail.com" class="btn">Hire Me</a>
-      <a href="https://wa.me/923320304421" class="btn whatsapp">WhatsApp</a>
+  <nav class="nav glass">
+    <div class="nav-inner container">
+      <div class="brand">
+        <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/main/Safa.jpg" alt="logo" class="logo">
+        <span class="brand-name">DHEERAJ</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left glass">
+        <img class="profile-img" src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/main/1318caee-b7cd-497a-bf22-77c7ee2200eb.png?raw=true" alt="Dheeraj">
+        <h1>Dheeraj Kumar</h1>
+        <p class="role">Graphic Designer · Visual Storyteller · Brand Identity</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Hire Me</a>
+          <a class="btn ghost" href="#projects">See Projects</a>
+        </div>
+      </div>
+      <div class="hero-right glass">
+        <h3>Featured Work</h3>
+        <div class="featured">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Featured 1">
+          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=80" alt="Featured 2">
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- Projects Section -->
-  <section class="projects container">
-    <h2>Projects & Achievements</h2>
-    <p style="text-align:center; font-size:1.1rem; margin-bottom:30px;">
-      Over the past year, we have successfully completed <strong>100 projects for 100 satisfied clients</strong>, ensuring high-quality, creative, and timely delivery in every task.
-    </p>
+  <main class="container">
+    <section id="work" class="experience">
+      <h2>Experience</h2>
+      <div class="experience-grid">
+        <article class="card glass">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Wheat_close-up.JPG/640px-Wheat_close-up.JPG" alt="">
+          <h3>Marvel Agro — Branding</h3>
+          <p>Packaging and visual identity for agricultural products.</p>
+        </article>
+        <article class="card glass">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Bookshelf.jpg/640px-Bookshelf.jpg" alt="">
+          <h3>Marvi Book — Covers</h3>
+          <p>Book cover design and marketing creatives.</p>
+        </article>
+        <article class="card glass">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Tailor_shop.jpg/640px-Tailor_shop.jpg" alt="">
+          <h3>HO.JAYE.GA — Apparel</h3>
+          <p>Apparel design and brand identity.</p>
+        </article>
+      </div>
+    </section>
 
-    <div class="project-gallery">
-      <div class="project-card">
-        <img src="https://picsum.photos/600/400?random=1" alt="Project 1">
-        <h3>Brand Design</h3>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="slider glass" data-slider>
+        <div class="slides">
+          <div class="slide"><img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1400&q=80" alt=""></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702a?auto=format&fit=crop&w=1400&q=80" alt=""></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=80" alt=""></div>
+        </div>
+        <button class="prev" aria-label="Previous">❮</button>
+        <button class="next" aria-label="Next">❯</button>
       </div>
-      <div class="project-card">
-        <img src="https://picsum.photos/600/400?random=2" alt="Project 2">
-        <h3>Social Media Campaign</h3>
-      </div>
-      <div class="project-card">
-        <img src="https://picsum.photos/600/400?random=3" alt="Project 3">
-        <h3>Web Portfolio</h3>
-      </div>
-    </div>
+    </section>
 
-    <div class="floating-card">
-      <h3 style="text-align:center; margin-top:30px;">Monthly Performance</h3>
-      <table class="performance-table">
-        <tr>
-          <th>Month</th>
-          <th>Projects Completed</th>
-          <th>Client Satisfaction (%)</th>
-        </tr>
-        <tr><td>January</td><td>8</td><td>100</td></tr>
-        <tr><td>February</td><td>9</td><td>100</td></tr>
-        <tr><td>March</td><td>10</td><td>100</td></tr>
-        <tr><td>April</td><td>8</td><td>100</td></tr>
-        <tr><td>May</td><td>9</td><td>100</td></tr>
-        <tr><td>June</td><td>10</td><td>100</td></tr>
-        <tr><td>July</td><td>12</td><td>100</td></tr>
-        <tr><td>August</td><td>12</td><td>100</td></tr>
-        <tr><td>September</td><td>10</td><td>100</td></tr>
-        <tr><td>October</td><td>12</td><td>100</td></tr>
-        <tr><td>November</td><td>4</td><td>100</td></tr>
-        <tr><td>December</td><td>6</td><td>100</td></tr>
-        <tr><td><strong>Total</strong></td><td><strong>100</strong></td><td><strong>100</strong></td></tr>
-      </table>
+    <section id="analytics" class="floating-card glass">
+      <h2 style="text-align:center">Visitors Analytics</h2>
+      <div class="chart-row">
+        <div class="chart-wrap">
+          <canvas id="visitorsChart"></canvas>
+        </div>
+        <div class="chart-legend">
+          <ul>
+            <li><strong>Facebook:</strong> 120</li>
+            <li><strong>WhatsApp:</strong> 90</li>
+            <li><strong>Google:</strong> 150</li>
+            <li><strong>Instagram:</strong> 70</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <!-- Chart.js Canvas -->
-      <canvas id="projectsChart" style="width:100%; max-width:700px; height:400px; display:block; margin:40px auto;"></canvas>
-    </div>
-  </section>
+    <section id="contact" class="contact glass">
+      <h2>Contact</h2>
+      <p>WhatsApp: <a href="https://wa.me/923320304421" target="_blank">0332 0304421</a></p>
+      <p>Email: <a href="mailto:vickypirdhan40@gmail.com">vickypirdhan40@gmail.com</a></p>
+    </section>
+  </main>
 
-  <!-- Experience Section -->
-  <section class="experience container">
-    <h2>Experience</h2>
-    <div class="exp-cards">
-      <div class="exp-card">
-        <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/refs/heads/main/download.png" alt="Paras Art Fever">
-        <h3>Paras Art Fever</h3>
-        <p>Graphic Designer & Branding Projects</p>
-      </div>
-      <div class="exp-card">
-        <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/refs/heads/main/images.jpg" alt="Marvel Agro">
-        <h3>Marvel Agro Commodities</h3>
-        <p>Design & Marketing</p>
-      </div>
-      <div class="exp-card">
-        <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/refs/heads/main/images.png" alt="Marvi Book Shop">
-        <h3>Marvi Book Shop</h3>
-        <p>Creative & Publishing Designs</p>
-      </div>
-      <!-- Safa Trader Updated -->
-      <div class="exp-card">
-        <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/refs/heads/main/Safa.jpg" alt="Safa Trader">
-        <h3>Safa Trader</h3>
-        <p>Trading & Business Management</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 Dheeraj Kumar (Vicky Pirdhan). All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Dheeraj Kumar — Premium Portfolio</p>
+    </div>
   </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-const ctx = document.getElementById('projectsChart').getContext('2d');
-const projectsChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
-        datasets: [{
-            label: 'Projects Completed',
-            data: [8,9,10,8,9,10,12,12,10,12,4,6],
-            backgroundColor: 'rgba(255,255,255,0.6)',
-            borderColor: 'rgba(255,255,255,1)',
-            borderWidth: 1,
-            borderRadius: 5
-        }]
-    },
-    options: {
-        scales: {
-            y: { beginAtZero:true, ticks:{color:'#fff'}, grid:{color:'rgba(255,255,255,0.2)'} },
-            x: { ticks:{color:'#fff'}, grid:{color:'rgba(255,255,255,0.2)'} }
-        },
-        plugins: { legend: { labels: { color:'#fff' } } }
-    }
-});
-</script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio with Chart</title>
-  <link rel="stylesheet" href="style.css">
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visitors Analytics</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body { 
-      background:#1f1c2c; 
-      color:#fff; 
-      font-family:sans-serif; 
-      display:flex; 
-      justify-content:center; 
-      align-items:center; 
-      height:100vh; 
-    }
-    .chart-box { 
-      width:420px; 
-      background:rgba(255,255,255,0.08); 
-      padding:25px; 
-      border-radius:20px; 
-      backdrop-filter:blur(12px); 
-      box-shadow:0 8px 25px rgba(0,0,0,0.3);
-    }
-    h2 { 
-      text-align:center; 
-      margin-bottom:15px; 
-      font-size:1.5rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="chart-box">
-    <h2>Visitors Analytics</h2>
-    <canvas id="visitorsChart"></canvas>
-  </div>
-
-  <script>
-    const ctx = document.getElementById('visitorsChart');
-    new Chart(ctx, {
-      type: 'doughnut',   // round chart
-      data: {
-        labels: ['Facebook', 'WhatsApp', 'Google', 'Instagram'],
-        datasets: [{
-          data: [120, 90, 150, 70], // demo numbers
-          backgroundColor: [
-            '#4267B2', // Facebook
-            '#25D366', // WhatsApp
-            '#4285F4', // Google
-            '#E1306C'  // Instagram
-          ],
-          borderColor: '#fff',
-          borderWidth: 2
-        }]
-      },
-      options: {
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: { color: '#fff', font: { size: 14 } }
-          }
-        }
-      }
-    });
-  </script>
-</body>
-</html>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visitors Analytics</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <style>
-    body { 
-      background:#1f1c2c; 
-      color:#fff; 
-      font-family:sans-serif; 
-      display:flex; 
-      justify-content:center; 
-      align-items:center; 
-      height:100vh; 
-      margin:0;
-    }
-    .chart-box { 
-      width:420px; 
-      height:420px;
-      background:rgba(255,255,255,0.08); 
-      padding:25px; 
-      border-radius:20px; 
-      backdrop-filter:blur(12px); 
-      box-shadow:0 8px 25px rgba(0,0,0,0.3);
-    }
-    h2 { 
-      text-align:center; 
-      margin-bottom:15px; 
-      font-size:1.5rem;
-    }
-    canvas {
-      width:100% !important;
-      height:100% !important;
-    }
-  </style>
-</head>
-<body>
-  <div class="chart-box">
-    <h2>Visitors Analytics</h2>
-    <canvas id="visitorsChart"></canvas>
-  </div>
-
-  <script>
-    const ctx = document.getElementById('visitorsChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        labels: ['Facebook', 'WhatsApp', 'Google', 'Instagram'],
-        datasets: [{
-          data: [120, 90, 150, 70], // demo numbers
-          backgroundColor: [
-            '#4267B2', // Facebook
-            '#25D366', // WhatsApp
-            '#4285F4', // Google
-            '#E1306C'  // Instagram
-          ],
-          borderColor: '#fff',
-          borderWidth: 2
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            position: 'bottom',
-            labels: { color: '#fff', font: { size: 14 } }
-          }
-        }
-      }
-    });
-  </script>
-</body>
-</html>
-
