@@ -136,56 +136,67 @@ const projectsChart = new Chart(ctx, {
   <title>Portfolio with Chart</title>
   <link rel="stylesheet" href="style.css">
 
-  <!-- Chart.js CDN -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visitors Analytics</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { 
+      background:#1f1c2c; 
+      color:#fff; 
+      font-family:sans-serif; 
+      display:flex; 
+      justify-content:center; 
+      align-items:center; 
+      height:100vh; 
+    }
+    .chart-box { 
+      width:420px; 
+      background:rgba(255,255,255,0.08); 
+      padding:25px; 
+      border-radius:20px; 
+      backdrop-filter:blur(12px); 
+      box-shadow:0 8px 25px rgba(0,0,0,0.3);
+    }
+    h2 { 
+      text-align:center; 
+      margin-bottom:15px; 
+      font-size:1.5rem;
+    }
+  </style>
 </head>
 <body>
-
-  <div class="container">
-    <header class="header">
-      <img src="your-photo.jpg" alt="Profile" class="profile-img">
-      <h1>Dheeraj Kumar</h1>
-      <p>Web Developer | Designer</p>
-    </header>
-
-    <section class="floating-card">
-      <h2 style="text-align:center; margin-bottom:20px;">Visitors Analytics</h2>
-      <canvas id="visitorsChart"></canvas>
-    </section>
+  <div class="chart-box">
+    <h2>Visitors Analytics</h2>
+    <canvas id="visitorsChart"></canvas>
   </div>
 
   <script>
-    const ctx = document.getElementById('visitorsChart').getContext('2d');
-    const visitorsChart = new Chart(ctx, {
-      type: 'doughnut',  // pie / bar / doughnut
+    const ctx = document.getElementById('visitorsChart');
+    new Chart(ctx, {
+      type: 'doughnut',   // round chart
       data: {
-        labels: ['Facebook', 'WhatsApp', 'Instagram', 'Google', 'Others'],
+        labels: ['Facebook', 'WhatsApp', 'Google', 'Instagram'],
         datasets: [{
-          label: 'Visitors',
-          data: [120, 90, 75, 150, 30], // yaha apna data dalna
+          data: [120, 90, 150, 70], // demo numbers
           backgroundColor: [
             '#4267B2', // Facebook
             '#25D366', // WhatsApp
-            '#E1306C', // Instagram
             '#4285F4', // Google
-            '#AAAAAA'  // Others
+            '#E1306C'  // Instagram
           ],
           borderColor: '#fff',
           borderWidth: 2
         }]
       },
       options: {
-        responsive: true,
         plugins: {
           legend: {
             position: 'bottom',
             labels: { color: '#fff', font: { size: 14 } }
-          },
-          title: {
-            display: true,
-            text: 'Traffic Sources',
-            color: '#fff',
-            font: { size: 18, weight: 'bold' }
           }
         }
       }
