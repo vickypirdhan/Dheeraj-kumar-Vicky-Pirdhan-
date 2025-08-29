@@ -128,3 +128,68 @@ const projectsChart = new Chart(ctx, {
 </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio with Chart</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <img src="your-photo.jpg" alt="Profile" class="profile-img">
+      <h1>Dheeraj Kumar</h1>
+      <p>Web Developer | Designer</p>
+    </header>
+
+    <section class="floating-card">
+      <h2 style="text-align:center; margin-bottom:20px;">Visitors Analytics</h2>
+      <canvas id="visitorsChart"></canvas>
+    </section>
+  </div>
+
+  <script>
+    const ctx = document.getElementById('visitorsChart').getContext('2d');
+    const visitorsChart = new Chart(ctx, {
+      type: 'doughnut',  // pie / bar / doughnut
+      data: {
+        labels: ['Facebook', 'WhatsApp', 'Instagram', 'Google', 'Others'],
+        datasets: [{
+          label: 'Visitors',
+          data: [120, 90, 75, 150, 30], // yaha apna data dalna
+          backgroundColor: [
+            '#4267B2', // Facebook
+            '#25D366', // WhatsApp
+            '#E1306C', // Instagram
+            '#4285F4', // Google
+            '#AAAAAA'  // Others
+          ],
+          borderColor: '#fff',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: '#fff', font: { size: 14 } }
+          },
+          title: {
+            display: true,
+            text: 'Traffic Sources',
+            color: '#fff',
+            font: { size: 18, weight: 'bold' }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
