@@ -1,14 +1,23 @@
-# Vercel Portfolio Starter
 
-A minimal static portfolio you can deploy to Vercel for free.
+# Premium Portfolio – Dheeraj
 
-## Quick Edit
-1. Open `index.html` and replace:
-   - **Dheeraj kumar (Vicky Pirdhan)**, intro text, 03320304421, Vickypirdhan40@gmail.com, links.
-   - Project images/links (currently using picsum placeholders).
-2. Commit the files to a GitHub repo.
-3. Import the repo on https://vercel.com/new (Framework: **Other**).
+A premium, classy portfolio starter (React + Vite + Tailwind + Framer Motion).
 
-## Notes
-- No build step needed (pure HTML + CSS).
-- Works on any static host (Vercel, GitHub Pages, Netlify).
+## Quick Start
+
+```bash
+npm i
+npm run dev
+```
+
+## Build & Deploy
+```bash
+npm run build
+# Deploy the dist/ folder to Vercel/Netlify/etc
+```
+
+## Customize
+- Edit text/images in `src/data/*` and `src/components/*`.
+- Colors & theme in `tailwind.config.js`.
+- Replace avatar in `src/assets/avatar.jpg` (or set a URL in `Hero.jsx`).
+
