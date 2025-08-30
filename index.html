@@ -1,64 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dheeraj Kumar - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dheeraj Kumar — Premium Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- Hero Section -->
+  <nav class="nav glass">
+    <div class="nav-inner container">
+      <div class="brand">
+        <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/main/Safa.jpg" alt="logo" class="logo">
+        <span class="brand-name">DHEERAJ</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header class="hero">
-    <div class="hero-content">
-      <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/refs/heads/main/1318caee-b7cd-497a-bf22-77c7ee2200eb.png" alt="Profile" class="profile-img">
-      <h1 class="name">Dheeraj Kumar</h1>
-      <p class="title">Frontend Developer | Designer</p>
-      <a href="#projects" class="btn">View My Work</a>
+    <div class="container hero-grid">
+      <div class="hero-left glass">
+        <img class="profile-img" src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/main/1318caee-b7cd-497a-bf22-77c7ee2200eb.png?raw=true" alt="Dheeraj">
+        <h1>Dheeraj Kumar</h1>
+        <p class="role">Graphic Designer · Visual Storyteller · Brand Identity</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Hire Me</a>
+          <a class="btn ghost" href="#projects">See Projects</a>
+        </div>
+      </div>
+      <div class="hero-right glass">
+        <h3>Featured Work</h3>
+        <div class="featured">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Featured 1">
+          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=80" alt="Featured 2">
+        </div>
+      </div>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      I am a passionate frontend developer with expertise in building modern, responsive, and visually stunning web experiences. 
-      I love combining clean code with creative designs to craft premium websites.
-    </p>
-  </section>
+  <main class="container">
+    <!-- Experience Section -->
+    <section id="work" class="experience">
+      <h2>Experience</h2>
+      <div class="experience-grid">
+        <article class="card glass">
+          <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/main/images.jpg" alt="Marvel Agro Logo">
+          <h3>Marvel Agro — Branding</h3>
+          <p>Packaging and visual identity for agricultural products.</p>
+        </article>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Responsive portfolio showcasing my skills and projects.</p>
-      </div>
-      <div class="project-card">
-        <h3>E-commerce UI</h3>
-        <p>Modern online store interface built with HTML, CSS, and JS.</p>
-      </div>
-      <div class="project-card">
-        <h3>Landing Page</h3>
-        <p>Premium landing page design with smooth animations.</p>
-      </div>
-    </div>
-  </section>
+        <article class="card glass">
+          <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/main/marvi.jpg" alt="Marvi Book Shop Logo">
+          <h3>Marvi Book — Covers</h3>
+          <p>Book cover design and marketing creatives.</p>
+        </article>
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </section>
+        <article class="card glass">
+          <img src="https://raw.githubusercontent.com/vickypirdhan/Dheeraj-kumar-Vicky-Pirdhan-/main/Safa.jpg" alt="HO.JAYE.GA Logo">
+          <h3>HO.JAYE.GA — Apparel</h3>
+          <p>Apparel design and brand identity.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects Slider -->
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="slider glass" data-slider>
+        <div class="slides">
+          <!-- Photo Editing -->
+          <div class="slide"><img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80" alt="Photo Editing 1"></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1200&q=80" alt="Photo Editing 2"></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80" alt="Photo Editing 3"></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1200&q=80" alt="Photo Editing 4"></div>
+          <!-- Video Editing -->
+          <div class="slide"><img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?auto=format&fit=crop&w=1200&q=80" alt="Video Editing 1"></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1581091012184-5c7b00eb9b26?auto=format&fit=crop&w=1200&q=80" alt="Video Editing 2"></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=1200&q=80" alt="Video Editing 3"></div>
+          <div class="slide"><img src="https://images.unsplash.com/photo-1581091870622-50d3fda4c1c5?auto=format&fit=crop&w=1200&q=80" alt="Video Editing 4"></div>
+        </div>
+        <button class="prev" aria-label="Previous">❮</button>
+        <button class="next" aria-label="Next">❯</button>
+      </div>
+    </section>
+
+    <!-- Analytics -->
+    <section id="analytics" class="floating-card glass">
+      <h2 style="text-align:center">Visitors Analytics</h2>
+      <div class="chart-row">
+        <div class="chart-wrap">
+          <canvas id="visitorsChart"></canvas>
+        </div>
+        <div class="chart-legend">
+          <ul>
+            <li><strong>Facebook:</strong> 120</li>
+            <li><strong>WhatsApp:</strong> 90</li>
+            <li><strong>Google:</strong> 150</li>
+            <li><strong>Instagram:</strong> 70</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact glass">
+      <h2>Contact</h2>
+      <p>WhatsApp: <a href="https://wa.me/923320304421" target="_blank">0332 0304421</a></p>
+      <p>Email: <a href="mailto:vickypirdhan40@gmail.com">vickypirdhan40@gmail.com</a></p>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 Dheeraj Kumar. All Rights Reserved.</p>
+    <div class="container">
+      <p>© 2025 Dheeraj Kumar — Premium Portfolio</p>
+    </div>
   </footer>
 </body>
 </html>
